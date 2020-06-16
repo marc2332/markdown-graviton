@@ -1,7 +1,8 @@
 const ToolsBar = (puffin,state) => {
 	const styleWrapper = puffin.style`
 		& {
-			padding: 10px;
+			margin: 7px;
+			padding: 10px 20px;
 			border-radius: 25px;
 			color: black;
 			background: rgba(0,0,0,0.1);

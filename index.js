@@ -21,8 +21,9 @@ function render(Tab,puffin,editor){
 		& > div:nth-child(2){
 			width: 100%;
 		}
-		& > * {
+		& > div:nth-child(2) {
 			height: 100%;
+			overflow:auto;
 		}
 		&[theme="transparent"] {
 			background: transparent;

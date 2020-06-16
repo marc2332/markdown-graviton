@@ -2,6 +2,8 @@
 
 Live preview of Markdown for [Graviton Editor](https://github.com/Graviton-Code-Editor/Graviton-App)
 
+![Screenshot](screenshot.png)
+
 WIP, Contributions / suggestions are welcomed.
 
 ## 🕹 Developing
