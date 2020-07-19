@@ -12,6 +12,7 @@
 	},
 	"author": "Marc Espín Sanz <mespinsanz@gmail.com>",
 	"dependencies": {
+		"lodash": "^4.17.19",
 		"marked": "^0.8.2"
 	},
 	"devDependencies": {
