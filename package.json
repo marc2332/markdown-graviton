@@ -1,21 +1,20 @@
 {
 	"name": "Markdown",
 	"id": "markdown-plugin",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Live Markdown preview for Graviton Editor.",
 	"main": "index.js",
 	"mainDev": "dist/index.js",
 	"mainSrc": "index.js",
 	"scripts": {
-		"watch": "gvsdk --entry package.json --target plugin",
-		"build": "gvsdk --entry package.json --target plugin --mode release"
+		"watch": "gvsdk --project . --target plugin",
+		"build": "gvsdk --project . --target plugin --mode release"
 	},
 	"author": "Marc Espín Sanz <mespinsanz@gmail.com>",
 	"dependencies": {
-		"lodash": "^4.17.19",
-		"marked": "^0.8.2"
+		"remarkable": "^2.0.1"
 	},
 	"devDependencies": {
-		"@gveditor/sdk": "^0.2.2"
+		"@gveditor/sdk": "^0.3.9"
 	}
 }
