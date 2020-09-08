@@ -1,7 +1,5 @@
-import marked from 'marked'
+import { Remarkable } from 'remarkable';
 import ToolsBar from './src/tools_bar'
-
-console.log(ToolsBar)
 
 function render(Tab,puffin,editor){
 	
@@ -55,13 +53,12 @@ function render(Tab,puffin,editor){
 			<div mounted="${mountedContainer}"/>
 		</div>`
 	}
-	const { bodyElement } = new Tab({
+	new Tab({
 		title: 'Markdown Preview',
 		component: containerComp
 	})
 	
 	function mountedContainer(){
-		console.log(this)
 		editor.client.do('onChanged',{
 			instance: editor.instance,
 			action: () => {
@@ -77,7 +74,10 @@ function render(Tab,puffin,editor){
 	
 }
 function updatePreview(containerElement,value){
-	containerElement.innerHTML = marked(value)
+	const markdown = new Remarkable({
+		html: true
+	});
+	containerElement.innerHTML = markdown.render(value)
 }
 
 export const entry = ({ StatusBarItem, Tab, RunningConfig, puffin }) => {
